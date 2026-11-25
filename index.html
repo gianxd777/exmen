@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conecta Campus: Solicitud de Beca Accesible | Universidad Valle Central</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --focus-ring-color: #1d4ed8;
+      --focus-ring-offset: 3px;
+      --focus-ring-width: 3px;
+    }
+
+    html {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    /* Escalado fluido WCAG 1.4.4 / 1.4.10 (100% / 150% / 200%) sin recortar controles */
+    html.scale-100 { font-size: 16px; }
+    html.scale-150 { font-size: 21px; }
+    html.scale-200 { font-size: 25px; }
+
+    /* Enlace de salto accesible (WCAG 2.4.1) */
+    .skip-link {
+      position: absolute;
+      top: -120px;
+      left: 1rem;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.85rem 1.25rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      z-index: 100;
+      transition: top 0.15s ease;
+      min-height: 44px;
+    }
+    .skip-link:focus {
+      top: 1rem;
+      outline: 3px solid #facc15;
+      outline-offset: 2px;
+    }
+
+    /* Foco visible de alto contraste WCAG 2.4.7 y 2.4.11 */
+    *:focus-visible {
+      outline: var(--focus-ring-width) solid var(--focus-ring-color) !important;
+      outline-offset: var(--focus-ring-offset) !important;
+      box-shadow: 0 0 0 6px rgba(29, 78, 216, 0.25) !important;
+    }
+
+    /* Objetivos táctiles y de clic amplios (>= 44x44px) */
+    button,
+    select,
+    input[type="text"],
+    input[type="email"],
+    summary {
+      min-height: 44px;
+    }
+
+    /* Apilamiento fluido cuando el texto se amplía al 150% o 200% */
+    html.scale-150 .responsive-stack,
+    html.scale-200 .responsive-stack {
+      flex-direction: column !important;
+      align-items: stretch !important;
+    }
+    html.scale-150 .responsive-stack > *,
+    html.scale-200 .responsive-stack > * {
+      width: 100% !important;
+    }
+    html.scale-200 .grid-adaptive {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    /* Modo alto contraste opcional integrado */
+    html.high-contrast body {
+      background-color: #020617 !important;
+      color: #f8fafc !important;
+    }
+    html.high-contrast .app-surface {
+      background-color: #0f172a !important;
+      color: #ffffff !important;
+      border-color: #94a3b8 !important;
+    }
+    html.high-contrast .app-card {
+      background-color: #1e293b !important;
+      color: #ffffff !important;
+      border-color: #cbd5e1 !important;
+    }
+    html.high-contrast .app-muted {
+      color: #e2e8f0 !important;
+    }
+    html.high-contrast input,
+    html.high-contrast select {
+      background-color: #020617 !important;
+      color: #ffffff !important;
+      border-color: #facc15 !important;
+    }
+    html.high-contrast *:focus-visible {
+      outline: 4px solid #facc15 !important;
+      box-shadow: 0 0 0 7px rgba(250, 204, 21, 0.35) !important;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-950 min-h-screen flex flex-col">
+
+  <!-- Enlace de salto directo al contenido principal (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal de la solicitud</a>
+
+  <!-- BARRA SUPERIOR DE HERRAMIENTAS DE ACCESIBILIDAD UNIVERSAL (WCAG 2.2 AA) -->
+  <section aria-label="Herramientas de accesibilidad visual, sesión y respaldo" class="bg-slate-950 text-white border-b border-slate-800 shadow-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full font-bold bg-emerald-600 text-white tracking-wide uppercase">
+          Diseño Universal WCAG 2.2 AA
+        </span>
+        <span id="draft-indicator" class="text-slate-200 font-medium">
+          Borrador guardado automáticamente
+        </span>
+      </div>
+
+      <!-- Controles integrados de ampliación de texto, contraste y gestión de tiempo -->
+      <div class="flex flex-wrap items-center gap-2">
+        <div role="group" aria-label="Tamaño de texto" class="inline-flex items-center rounded-xl bg-slate-900 border border-slate-700 p-1 gap-1">
+          <span class="text-xs text-slate-300 px-2 font-semibold">Texto:</span>
+          <button type="button" data-scale="100" aria-pressed="true"
+            class="scale-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white cursor-pointer">
+            100%
+          </button>
+          <button type="button" data-scale="150" aria-pressed="false"
+            class="scale-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-200 hover:bg-slate-800 cursor-pointer">
+            150%
+          </button>
+          <button type="button" data-scale="200" aria-pressed="false"
+            class="scale-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-200 hover:bg-slate-800 cursor-pointer">
+            200%
+          </button>
+        </div>
+
+        <button type="button" id="btn-toggle-contrast" aria-pressed="false"
+          class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 text-xs font-bold cursor-pointer">
+          Alto contraste
+        </button>
+
+        <button type="button" id="btn-simulate-timeout"
+          class="px-3 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold cursor-pointer">
+          Simular aviso de sesión (2 min)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PRINCIPAL UNIFICADO -->
+  <div class="max-w-6xl mx-auto w-full px-4 py-6 flex-1 space-y-6">
+
+    <!-- PORTAL CONECTA CAMPUS -->
+    <div class="app-surface bg-white rounded-2xl shadow-md border border-slate-300 overflow-hidden">
+
+      <!-- Encabezado institucional -->
+      <header class="bg-blue-950 text-white px-5 sm:px-8 py-5 border-b border-blue-900">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <div class="w-11 h-11 rounded-xl bg-blue-600 flex items-center justify-center font-extrabold text-lg shrink-0" aria-hidden="true">
+              VC
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wider text-blue-200 font-semibold">Portal Estudiantil Conecta Campus</p>
+              <p class="text-lg font-extrabold leading-tight">Universidad Valle Central · Solicitud de Beca</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span id="connection-pill" class="px-3 py-1.5 rounded-full bg-emerald-900/90 border border-emerald-600 text-emerald-100 font-semibold">
+              Conexión protegida · Respaldo local activo
+            </span>
+          </div>
+        </div>
+
+        <!-- Navegación de pasos accesible -->
+        <nav aria-label="Progreso de la solicitud de beca" class="mt-5 pt-4 border-t border-blue-900/80">
+          <ol class="grid grid-cols-1 md:grid-cols-3 gap-2.5 grid-adaptive">
+            <li>
+              <button type="button" data-step-nav="1" id="step-tab-1" aria-current="step"
+                class="step-nav-btn w-full text-left px-4 py-3 rounded-xl bg-white text-blue-950 font-extrabold text-sm flex items-center gap-3 shadow-sm cursor-pointer">
+                <span class="w-7 h-7 rounded-full bg-blue-700 text-white text-xs flex items-center justify-center font-extrabold shrink-0">1</span>
+                <span>Paso 1: Requisitos</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" data-step-nav="2" id="step-tab-2"
+                class="step-nav-btn w-full text-left px-4 py-3 rounded-xl bg-blue-900/80 text-blue-100 hover:bg-blue-900 font-bold text-sm flex items-center gap-3 border border-blue-800 cursor-pointer">
+                <span class="w-7 h-7 rounded-full bg-blue-800 text-blue-100 text-xs flex items-center justify-center font-bold shrink-0">2</span>
+                <span>Paso 2: Formulario y adjuntos</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" data-step-nav="3" id="step-tab-3"
+                class="step-nav-btn w-full text-left px-4 py-3 rounded-xl bg-blue-900/80 text-blue-100 hover:bg-blue-900 font-bold text-sm flex items-center gap-3 border border-blue-800 cursor-pointer">
+                <span class="w-7 h-7 rounded-full bg-blue-800 text-blue-100 text-xs flex items-center justify-center font-bold shrink-0">3</span>
+                <span>Paso 3: Revisión y confirmación</span>
+              </button>
+            </li>
+          </ol>
+        </nav>
+      </header>
+
+      <!-- Región viva global para lectores de pantalla -->
+      <div id="global-live-status" role="status" aria-live="polite" class="sr-only"></div>
+
+      <!-- CONTENIDO PRINCIPAL DE LAS 3 PANTALLAS -->
+      <main id="main-content" tabindex="-1" class="p-5 sm:p-8 focus:outline-none">
+
+        <!-- ===================================================================== -->
+        <!-- PANTALLA 1: REQUISITOS Y CRONOGRAMA                                   -->
+        <!-- ===================================================================== -->
+        <section id="screen-1" aria-labelledby="screen-1-heading" class="space-y-6">
+          <div class="border-b border-slate-200 pb-4">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-950 mb-2">
+              Convocatoria Ordinaria 2026-I · Información accesible en texto y multimedia
+            </span>
+            <h1 id="screen-1-heading" tabindex="-1" class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+              Solicitud de Beca: Requisitos y Cronograma
+            </h1>
+            <p class="app-muted text-slate-800 mt-2 text-base leading-relaxed">
+              Consulta las condiciones generales y los tres documentos obligatorios antes de iniciar. Toda la guía está disponible por escrito, en video con subtítulos y en transcripción completa.
+            </p>
+          </div>
+
+          <!-- Requisitos en HTML semántico real (sin imágenes con texto) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 grid-adaptive">
+            <article class="app-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 space-y-3">
+              <h2 class="text-lg font-extrabold text-slate-950">
+                Condiciones generales y fechas clave
+              </h2>
+              <ul class="space-y-2.5 text-sm text-slate-900 list-disc pl-5 leading-relaxed">
+                <li>Contar con <strong>matrícula vigente</strong> en el semestre académico actual de la Universidad Valle Central.</li>
+                <li>No registrar sanciones disciplinarias vigentes ni deudas pendientes de ciclos anteriores.</li>
+                <li>Adjuntar los <strong>tres documentos obligatorios</strong> en formato <strong>PDF o JPG</strong> (máximo <strong>5 MB</strong> por archivo).</li>
+                <li><strong>Fecha límite de envío:</strong> Viernes 18 de diciembre de 2026 a las 23:59 h.</li>
+              </ul>
+            </article>
+
+            <article class="app-card bg-blue-50/80 border-2 border-blue-200 rounded-2xl p-5 space-y-3">
+              <h2 class="text-lg font-extrabold text-blue-950">
+                Documentos obligatorios requeridos
+              </h2>
+              <ol class="space-y-2.5 text-sm text-slate-950 list-decimal pl-5 leading-relaxed">
+                <li>
+                  <strong>Constancia de matrícula vigente:</strong> Emitida por Registro Académico (PDF o JPG, máx. 5 MB).
+                </li>
+                <li>
+                  <strong>Constancia de ingresos del hogar:</strong> Boleta de pago, recibo por honorarios o sustento de ingresos familiares (PDF o JPG, máx. 5 MB).
+                </li>
+                <li>
+                  <strong>Declaración jurada firmada:</strong> Formato oficial de veracidad socioeconómica (PDF o JPG, máx. 5 MB).
+                </li>
+              </ol>
+            </article>
+          </div>
+
+          <!-- Reproductor de video con subtítulos sincronizados CC y transcripción completa -->
+          <section aria-labelledby="video-guide-heading" class="bg-slate-950 text-white rounded-2xl p-5 sm:p-6 border border-slate-700 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 id="video-guide-heading" class="text-lg font-extrabold text-white">
+                  Video explicativo: Documentos y fechas de postulación
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Incluye subtítulos sincronizados en español (CC) y transcripción textual completa debajo.
+                </p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-extrabold">
+                Subtítulos CC + Transcripción
+              </span>
+            </div>
+
+            <!-- Pantalla del reproductor con subtítulos visibles -->
+            <div class="bg-slate-900 rounded-xl border border-slate-700 p-5 flex flex-col justify-between min-h-[185px] space-y-4">
+              <div class="flex items-center justify-between text-xs text-slate-300">
+                <span>Bienestar Universitario · Valle Central</span>
+                <span id="video-timecode" class="font-mono font-bold text-white">00:00 / 00:15</span>
+              </div>
+
+              <div class="text-center space-y-2.5">
+                <p class="text-xs sm:text-sm text-indigo-300 font-semibold" id="video-visual-scene">
+                  [Escena 1: Bienvenida e información general de la convocatoria 2026-I]
+                </p>
+                <div id="video-caption-box"
+                  class="inline-block max-w-2xl px-4 py-3 rounded-xl bg-black text-yellow-300 border border-slate-600 text-sm sm:text-base font-bold leading-relaxed shadow">
+                  [CC] «Bienvenido a Conecta Campus. Para solicitar tu beca necesitas tres documentos en PDF o JPG de hasta 5 megabytes.»
+                </div>
+              </div>
+
+              <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden" role="progressbar"
+                aria-label="Progreso del video informativo" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="video-progress-bar">
+                <div id="video-progress-fill" class="bg-blue-500 h-full w-0 transition-all duration-300"></div>
+              </div>
+            </div>
+
+            <!-- Controles de reproducción 100% operables por teclado -->
+            <div class="flex flex-wrap items-center gap-3 responsive-stack">
+              <button type="button" id="btn-video-play"
+                class="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm cursor-pointer">
+                Reproducir video con subtítulos
+              </button>
+              <button type="button" id="btn-video-cc" aria-pressed="true"
+                class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-500 font-bold text-sm cursor-pointer">
+                Subtítulos (CC): Activados
+              </button>
+              <button type="button" id="btn-video-next-cue"
+                class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-600 font-semibold text-sm cursor-pointer">
+                Avanzar subtítulo
+              </button>
+            </div>
+
+            <!-- Transcripción textual completa desplegable (<details>/<summary>) -->
+            <details id="video-transcript-details" class="bg-slate-900 border border-slate-700 rounded-xl p-4" open>
+              <summary class="font-extrabold text-sm text-amber-300 cursor-pointer py-1">
+                Transcripción textual completa del video (Lectura sin audio)
+              </summary>
+              <div class="mt-3 pt-3 border-t border-slate-700 text-sm text-slate-100 space-y-2 leading-relaxed">
+                <p><strong>[00:00 - 00:05] Narración:</strong> «Bienvenido a Conecta Campus. Para solicitar tu beca necesitas tres documentos en PDF o JPG de hasta 5 megabytes.»</p>
+                <p><strong>[00:05 - 00:10] Narración:</strong> «Primero, tu constancia de matrícula vigente; segundo, tu constancia de ingresos del hogar; y tercero, la declaración jurada firmada.»</p>
+                <p><strong>[00:10 - 00:15] Narración:</strong> «Tienes plazo hasta el viernes 18 de diciembre. Tu avance se guarda automáticamente y puedes revisar todo antes de enviar.»</p>
+              </div>
+            </details>
+          </section>
+
+          <!-- Acción principal de avance -->
+          <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4 responsive-stack">
+            <p class="app-muted text-sm text-slate-800">
+              Tus respuestas se guardan automáticamente en este dispositivo mientras completas la solicitud.
+            </p>
+            <button type="button" id="btn-to-step-2"
+              class="px-6 py-3.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-extrabold text-base shadow-sm cursor-pointer">
+              Continuar al formulario
+            </button>
+          </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- PANTALLA 2: FORMULARIO Y DOCUMENTOS ADJUNTOS                          -->
+        <!-- ===================================================================== -->
+        <section id="screen-2" aria-labelledby="screen-2-heading" class="hidden space-y-6">
+          <div class="border-b border-slate-200 pb-4">
+            <h1 id="screen-2-heading" tabindex="-1" class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+              Formulario de Postulación y Documentos Adjuntos
+            </h1>
+            <p class="app-muted text-slate-800 mt-2 text-base">
+              Completa tus datos personales y adjunta los tres documentos obligatorios. Todos los campos marcados con <strong>(* Obligatorio)</strong> son requeridos.
+            </p>
+          </div>
+
+          <!-- Resumen accesible de errores (role="alert") -->
+          <div id="error-summary" role="alert" tabindex="-1"
+            class="hidden bg-red-50 border-2 border-red-700 rounded-2xl p-5 text-red-950 space-y-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-red-700 text-white text-xs font-extrabold uppercase">
+                Error de validación
+              </span>
+              <h2 class="text-base font-extrabold text-red-950">
+                Revisa los siguientes puntos antes de continuar (tus demás datos se han conservado):
+              </h2>
+            </div>
+            <ul id="error-summary-list" class="list-disc pl-6 space-y-2 text-sm font-bold"></ul>
+          </div>
+
+          <form id="scholarship-form" novalidate class="space-y-8">
+            <!-- BLOQUE 1: DATOS DEL POSTULANTE Y TIPO DE BECA -->
+            <fieldset class="app-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 sm:p-6 space-y-5">
+              <legend class="px-3.5 py-1 rounded-lg bg-blue-950 text-white text-sm font-extrabold">
+                1. Datos del postulante y modalidad de beca
+              </legend>
+
+              <!-- Selector nativo <select> 100% operable por teclado -->
+              <div class="space-y-1.5">
+                <label for="tipo-beca" class="block text-sm font-extrabold text-slate-950">
+                  Tipo de beca <span class="text-red-700">(* Obligatorio)</span>
+                </label>
+                <select id="tipo-beca" name="tipoBeca" required aria-required="true"
+                  aria-describedby="help-tipo-beca error-tipo-beca"
+                  class="w-full px-4 py-3 rounded-xl border-2 border-slate-500 bg-white text-slate-950 text-base font-semibold">
+                  <option value="">-- Selecciona una modalidad de beca --</option>
+                  <option value="Beca Socioeconómica">Beca Socioeconómica</option>
+                  <option value="Beca Excelencia Académica">Beca Excelencia Académica</option>
+                  <option value="Beca Talento Deportivo/Cultural">Beca Talento Deportivo/Cultural</option>
+                </select>
+                <p id="help-tipo-beca" class="app-muted text-xs sm:text-sm text-slate-700">
+                  Elige la modalidad a la que postulas usando el teclado (flechas arriba/abajo) o el ratón.
+                </p>
+                <p id="error-tipo-beca" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2"></p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 grid-adaptive">
+                <!-- Nombre completo -->
+                <div class="space-y-1.5">
+                  <label for="nombre-completo" class="block text-sm font-extrabold text-slate-950">
+                    Nombre completo <span class="text-red-700">(* Obligatorio)</span>
+                  </label>
+                  <input type="text" id="nombre-completo" name="nombreCompleto" required aria-required="true"
+                    autocomplete="name" aria-describedby="help-nombre error-nombre"
+                    class="w-full px-4 py-3 rounded-xl border-2 border-slate-500 bg-white text-slate-950 text-base" />
+                  <p id="help-nombre" class="app-muted text-xs sm:text-sm text-slate-700">
+                    Ingresa tus nombres y apellidos completos (ejemplo: Andrea Camila Quispe Rojas).
+                  </p>
+                  <p id="error-nombre" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2"></p>
+                </div>
+
+                <!-- Código de estudiante -->
+                <div class="space-y-1.5">
+                  <label for="codigo-estudiante" class="block text-sm font-extrabold text-slate-950">
+                    Código de estudiante <span class="text-red-700">(* Obligatorio)</span>
+                  </label>
+                  <input type="text" id="codigo-estudiante" name="codigoEstudiante" required aria-required="true"
+                    inputmode="numeric" aria-describedby="help-codigo error-codigo"
+                    class="w-full px-4 py-3 rounded-xl border-2 border-slate-500 bg-white text-slate-950 text-base" />
+                  <p id="help-codigo" class="app-muted text-xs sm:text-sm text-slate-700">
+                    Ingresa tu código universitario de 8 a 10 dígitos (ejemplo: 2023104892).
+                  </p>
+                  <p id="error-codigo" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2"></p>
+                </div>
+              </div>
+
+              <!-- Correo institucional -->
+              <div class="space-y-1.5">
+                <label for="correo-institucional" class="block text-sm font-extrabold text-slate-950">
+                  Correo institucional <span class="text-red-700">(* Obligatorio)</span>
+                </label>
+                <input type="email" id="correo-institucional" name="correoInstitucional" required aria-required="true"
+                  autocomplete="email" aria-describedby="help-correo error-correo"
+                  class="w-full px-4 py-3 rounded-xl border-2 border-slate-500 bg-white text-slate-950 text-base" />
+                <p id="help-correo" class="app-muted text-xs sm:text-sm text-slate-700">
+                  Usa tu dirección oficial @vallecentral.edu.pe para recibir tu comprobante de registro.
+                </p>
+                <p id="error-correo" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2"></p>
+              </div>
+            </fieldset>
+
+            <!-- BLOQUE 2: DOCUMENTOS ADJUNTOS (SIN ARRASTRE OBLIGATORIO) -->
+            <fieldset class="app-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 sm:p-6 space-y-5">
+              <legend class="px-3.5 py-1 rounded-lg bg-blue-950 text-white text-sm font-extrabold">
+                2. Documentos obligatorios adjuntos
+              </legend>
+
+              <!-- Texto exacto requerido para la instrucción de adjuntar -->
+              <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 text-sm text-blue-950 leading-relaxed">
+                <p class="font-extrabold mb-1">Instrucción para adjuntar documentos:</p>
+                <p>
+                  Adjunta el documento en formato PDF o JPG (tamaño máximo de 5 MB por archivo). Puedes pulsar el botón <strong>"Seleccionar archivo"</strong> para elegirlo desde tu dispositivo mediante el teclado o el ratón, o bien arrastrar el archivo hasta el área indicada.
+                </p>
+              </div>
+
+              <!-- DOCUMENTO 1: Constancia de matrícula vigente -->
+              <div id="doc-card-matricula" data-dropzone="matricula"
+                class="app-card bg-white border-2 border-slate-300 rounded-xl p-4 sm:p-5 space-y-3 transition">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <label for="file-matricula" class="block text-base font-extrabold text-slate-950">
+                      Constancia de matrícula vigente <span class="text-red-700">(* Obligatorio)</span>
+                    </label>
+                    <p id="help-file-matricula" class="app-muted text-xs sm:text-sm text-slate-700 mt-0.5">
+                      Formatos permitidos: PDF o JPG (máximo 5 MB). Pulsa «Seleccionar archivo» o arrastra aquí.
+                    </p>
+                  </div>
+                  <span id="badge-matricula" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950">
+                    Pendiente
+                  </span>
+                </div>
+
+                <input type="file" id="file-matricula" accept=".pdf,.jpg,.jpeg,application/pdf,image/jpeg"
+                  aria-required="true" aria-describedby="help-file-matricula error-file-matricula" class="sr-only" />
+
+                <div class="flex flex-wrap items-center gap-3 responsive-stack">
+                  <button type="button" data-trigger-file="file-matricula"
+                    class="px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm cursor-pointer">
+                    Seleccionar archivo
+                  </button>
+                  <button type="button" data-simulate-file="matricula"
+                    class="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-950 border border-slate-400 font-semibold text-xs sm:text-sm cursor-pointer">
+                    Cargar archivo de muestra (constancia_matricula_2026.pdf)
+                  </button>
+                  <button type="button" data-remove-file="matricula" id="remove-matricula"
+                    class="hidden px-3.5 py-2.5 rounded-xl bg-red-100 hover:bg-red-200 text-red-950 font-bold text-xs cursor-pointer">
+                    Quitar
+                  </button>
+                </div>
+
+                <p id="status-file-matricula" class="text-sm font-semibold text-slate-800">
+                  Ningún archivo seleccionado.
+                </p>
+                <p id="error-file-matricula" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2.5"></p>
+              </div>
+
+              <!-- DOCUMENTO 2: Constancia de ingresos del hogar -->
+              <div id="doc-card-ingresos" data-dropzone="ingresos"
+                class="app-card bg-white border-2 border-slate-300 rounded-xl p-4 sm:p-5 space-y-3 transition">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <label for="file-ingresos" class="block text-base font-extrabold text-slate-950">
+                      Constancia de ingresos del hogar <span class="text-red-700">(* Obligatorio)</span>
+                    </label>
+                    <p id="help-file-ingresos" class="app-muted text-xs sm:text-sm text-slate-700 mt-0.5">
+                      Formatos permitidos: PDF o JPG (máximo 5 MB). Pulsa «Seleccionar archivo» o arrastra aquí.
+                    </p>
+                  </div>
+                  <span id="badge-ingresos" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950">
+                    Pendiente
+                  </span>
+                </div>
+
+                <input type="file" id="file-ingresos" accept=".pdf,.jpg,.jpeg,application/pdf,image/jpeg"
+                  aria-required="true" aria-describedby="help-file-ingresos error-file-ingresos" class="sr-only" />
+
+                <div class="flex flex-wrap items-center gap-3 responsive-stack">
+                  <button type="button" data-trigger-file="file-ingresos"
+                    class="px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm cursor-pointer">
+                    Seleccionar archivo
+                  </button>
+                  <button type="button" data-simulate-file="ingresos"
+                    class="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-950 border border-slate-400 font-semibold text-xs sm:text-sm cursor-pointer">
+                    Cargar archivo de muestra (constancia_ingresos_hogar.pdf)
+                  </button>
+                  <button type="button" data-remove-file="ingresos" id="remove-ingresos"
+                    class="hidden px-3.5 py-2.5 rounded-xl bg-red-100 hover:bg-red-200 text-red-950 font-bold text-xs cursor-pointer">
+                    Quitar
+                  </button>
+                </div>
+
+                <p id="status-file-ingresos" class="text-sm font-semibold text-slate-800">
+                  Ningún archivo seleccionado.
+                </p>
+                <p id="error-file-ingresos" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2.5"></p>
+              </div>
+
+              <!-- DOCUMENTO 3: Declaración jurada firmada -->
+              <div id="doc-card-declaracion" data-dropzone="declaracion"
+                class="app-card bg-white border-2 border-slate-300 rounded-xl p-4 sm:p-5 space-y-3 transition">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <label for="file-declaracion" class="block text-base font-extrabold text-slate-950">
+                      Declaración jurada firmada <span class="text-red-700">(* Obligatorio)</span>
+                    </label>
+                    <p id="help-file-declaracion" class="app-muted text-xs sm:text-sm text-slate-700 mt-0.5">
+                      Formatos permitidos: PDF o JPG (máximo 5 MB). Pulsa «Seleccionar archivo» o arrastra aquí.
+                    </p>
+                  </div>
+                  <span id="badge-declaracion" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950">
+                    Pendiente
+                  </span>
+                </div>
+
+                <input type="file" id="file-declaracion" accept=".pdf,.jpg,.jpeg,application/pdf,image/jpeg"
+                  aria-required="true" aria-describedby="help-file-declaracion error-file-declaracion" class="sr-only" />
+
+                <div class="flex flex-wrap items-center gap-3 responsive-stack">
+                  <button type="button" data-trigger-file="file-declaracion"
+                    class="px-4 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm cursor-pointer">
+                    Seleccionar archivo
+                  </button>
+                  <button type="button" data-simulate-file="declaracion"
+                    class="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-950 border border-slate-400 font-semibold text-xs sm:text-sm cursor-pointer">
+                    Cargar archivo de muestra (declaracion_jurada_firmada.pdf)
+                  </button>
+                  <button type="button" data-remove-file="declaracion" id="remove-declaracion"
+                    class="hidden px-3.5 py-2.5 rounded-xl bg-red-100 hover:bg-red-200 text-red-950 font-bold text-xs cursor-pointer">
+                    Quitar
+                  </button>
+                </div>
+
+                <p id="status-file-declaracion" class="text-sm font-semibold text-slate-800">
+                  Ningún archivo seleccionado.
+                </p>
+                <p id="error-file-declaracion" class="hidden text-sm font-bold text-red-800 bg-red-50 border border-red-300 rounded-lg px-3 py-2.5"></p>
+              </div>
+            </fieldset>
+
+            <!-- Botones de navegación inferiores con reflow garantizado al 200% -->
+            <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4 responsive-stack">
+              <button type="button" id="btn-back-step-1"
+                class="px-5 py-3 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-950 font-extrabold text-base cursor-pointer">
+                Volver a requisitos
+              </button>
+
+              <div class="flex flex-wrap items-center gap-3 responsive-stack">
+                <button type="button" id="btn-fill-demo-data"
+                  class="px-4 py-3 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-950 border border-indigo-300 font-bold text-sm cursor-pointer">
+                  Rellenar datos de ejemplo
+                </button>
+                <button type="submit" id="btn-to-step-3"
+                  class="px-6 py-3.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-extrabold text-base shadow-sm cursor-pointer">
+                  Continuar a revisión
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- PANTALLA 3: REVISIÓN Y CONFIRMACIÓN                                   -->
+        <!-- ===================================================================== -->
+        <section id="screen-3" aria-labelledby="screen-3-heading" class="hidden space-y-6">
+
+          <!-- VISTA DE REVISIÓN PREVIA AL ENVÍO -->
+          <div id="review-subview" class="space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-950 mb-2">
+                Verificación final · Prevención de errores
+              </span>
+              <h1 id="screen-3-heading" tabindex="-1" class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+                Revisión de tu Solicitud antes de Enviar
+              </h1>
+              <p class="app-muted text-slate-800 mt-2 text-base">
+                Comprueba que todos tus datos y documentos sean correctos. Puedes pulsar <strong>«Editar»</strong> en cualquier sección para volver directamente al campo sin perder tu progreso.
+              </p>
+            </div>
+
+            <!-- Resumen de datos personales -->
+            <div class="app-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-3 responsive-stack">
+                <h2 class="text-lg font-extrabold text-slate-950">1. Datos del postulante y tipo de beca</h2>
+                <button type="button" data-edit-target="tipo-beca"
+                  class="px-4 py-2 rounded-xl bg-white hover:bg-blue-50 text-blue-900 border-2 border-blue-700 font-bold text-sm cursor-pointer">
+                  Editar datos personales
+                </button>
+              </div>
+              <dl class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm grid-adaptive">
+                <div>
+                  <dt class="text-slate-600 font-bold">Tipo de beca</dt>
+                  <dd id="review-beca" class="font-extrabold text-slate-950 mt-0.5 text-base">—</dd>
+                </div>
+                <div>
+                  <dt class="text-slate-600 font-bold">Nombre completo</dt>
+                  <dd id="review-nombre" class="font-extrabold text-slate-950 mt-0.5 text-base">—</dd>
+                </div>
+                <div>
+                  <dt class="text-slate-600 font-bold">Código de estudiante</dt>
+                  <dd id="review-codigo" class="font-extrabold text-slate-950 mt-0.5 text-base">—</dd>
+                </div>
+                <div>
+                  <dt class="text-slate-600 font-bold">Correo institucional</dt>
+                  <dd id="review-correo" class="font-extrabold text-slate-950 mt-0.5 text-base break-all">—</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Resumen de documentos adjuntos -->
+            <div class="app-card bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-3 responsive-stack">
+                <h2 class="text-lg font-extrabold text-slate-950">2. Documentos obligatorios adjuntos</h2>
+                <button type="button" data-edit-target="doc-card-matricula"
+                  class="px-4 py-2 rounded-xl bg-white hover:bg-blue-50 text-blue-900 border-2 border-blue-700 font-bold text-sm cursor-pointer">
+                  Editar documentos adjuntos
+                </button>
+              </div>
+              <ul class="space-y-2.5 text-sm">
+                <li class="flex flex-wrap items-center justify-between gap-2 p-3.5 rounded-xl bg-white border border-slate-300">
+                  <span class="font-bold text-slate-950">Constancia de matrícula vigente:</span>
+                  <span id="review-doc-matricula" class="font-extrabold text-emerald-800">—</span>
+                </li>
+                <li class="flex flex-wrap items-center justify-between gap-2 p-3.5 rounded-xl bg-white border border-slate-300">
+                  <span class="font-bold text-slate-950">Constancia de ingresos del hogar:</span>
+                  <span id="review-doc-ingresos" class="font-extrabold text-emerald-800">—</span>
+                </li>
+                <li class="flex flex-wrap items-center justify-between gap-2 p-3.5 rounded-xl bg-white border border-slate-300">
+                  <span class="font-bold text-slate-950">Declaración jurada firmada:</span>
+                  <span id="review-doc-declaracion" class="font-extrabold text-emerald-800">—</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4 responsive-stack">
+              <button type="button" id="btn-back-step-2"
+                class="px-5 py-3 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-950 font-extrabold text-base cursor-pointer">
+                Volver al formulario
+              </button>
+              <button type="button" id="btn-submit-application"
+                class="px-7 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-base shadow-md cursor-pointer">
+                Enviar solicitud
+              </button>
+            </div>
+          </div>
+
+          <!-- VISTA DE CONFIRMACIÓN DEL REGISTRO (Foco en <h1> + role="status") -->
+          <div id="confirmation-subview" class="hidden space-y-6">
+            <div class="bg-emerald-50 border-2 border-emerald-700 rounded-2xl p-6 sm:p-8 space-y-4">
+              <span class="inline-block px-3 py-1 rounded-full bg-emerald-700 text-white text-xs font-extrabold uppercase tracking-wide">
+                Estado: Registro completado · Código #BEC-2026-0418
+              </span>
+
+              <!-- Encabezado principal que recibe el foco programático tras enviar -->
+              <h1 id="confirmation-heading" tabindex="-1" class="text-2xl sm:text-3xl font-extrabold text-emerald-950">
+                Solicitud registrada correctamente
+              </h1>
+
+              <!-- Región viva role="status" aria-live="polite" con el mensaje exacto -->
+              <div id="confirmation-live-region" role="status" aria-live="polite"
+                class="p-4 rounded-xl bg-white border-2 border-emerald-300 text-slate-950 text-base leading-relaxed font-semibold shadow-sm">
+                Solicitud registrada correctamente. Tu postulación a la beca ha sido recibida con el código de seguimiento <strong>#BEC-2026-0418</strong> y se ha enviado un comprobante a tu correo institucional.
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-sm grid-adaptive">
+                <div class="p-3.5 rounded-xl bg-white border border-emerald-300">
+                  <span class="block text-xs text-slate-600 font-bold">Código de seguimiento</span>
+                  <strong class="text-base text-slate-950">#BEC-2026-0418</strong>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white border border-emerald-300">
+                  <span class="block text-xs text-slate-600 font-bold">Modalidad postulada</span>
+                  <strong id="confirm-beca" class="text-base text-slate-950">—</strong>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white border border-emerald-300">
+                  <span class="block text-xs text-slate-600 font-bold">Comprobante enviado a</span>
+                  <strong id="confirm-correo" class="text-base text-slate-950 break-all">—</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 responsive-stack">
+              <div class="flex flex-wrap items-center gap-3 responsive-stack">
+                <button type="button" id="btn-download-receipt"
+                  class="px-5 py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm cursor-pointer">
+                  Descargar comprobante resumen (.txt)
+                </button>
+                <button type="button" id="btn-copy-tracking"
+                  class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-950 border border-slate-400 font-bold text-sm cursor-pointer">
+                  Copiar código (#BEC-2026-0418)
+                </button>
+              </div>
+              <button type="button" id="btn-reset-demo"
+                class="px-5 py-3 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-950 font-bold text-sm cursor-pointer">
+                Iniciar nueva solicitud
+              </button>
+            </div>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <!-- MONITOR EN VIVO DE LECTOR DE PANTALLA (ARIA LIVE + FOCO) SIEMPRE DISPONIBLE -->
+    <section aria-labelledby="aria-monitor-heading" class="bg-slate-900 text-slate-100 rounded-2xl border border-slate-700 p-4 sm:p-5 shadow-sm">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+        <h2 id="aria-monitor-heading" class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-indigo-300">
+          Monitor en vivo de Lector de Pantalla (ARIA Live + Trazado de Foco)
+        </h2>
+        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-950 text-indigo-200 border border-indigo-700">
+          Auditoría WCAG 2.2 AA en tiempo real
+        </span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs grid-adaptive">
+        <div class="md:col-span-2 bg-slate-950 border border-slate-700 rounded-xl p-3">
+          <span class="block text-slate-400 font-semibold mb-1">Último anuncio emitido a tecnología de asistencia:</span>
+          <p id="sr-live-transcript" class="text-emerald-300 font-mono leading-relaxed">
+            Portal Conecta Campus cargado. Paso 1 de 3: Requisitos y cronograma.
+          </p>
+        </div>
+        <div class="bg-slate-950 border border-slate-700 rounded-xl p-3 flex flex-col justify-between">
+          <div>
+            <span class="block text-slate-400 font-semibold">Control enfocado con teclado:</span>
+            <strong id="sr-focused-element" class="text-white font-mono">Inicio del documento</strong>
+          </div>
+          <div class="mt-2 pt-2 border-t border-slate-800">
+            <span class="block text-slate-400 font-semibold">Nombre accesible calculado:</span>
+            <strong id="sr-accessible-name" class="text-amber-300">—</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL ACCESIBLE DE GESTIÓN DE TIEMPO DE SESIÓN (WCAG 2.2.1)           -->
+  <!-- ===================================================================== -->
+  <div id="session-modal-backdrop" class="hidden fixed inset-0 bg-slate-950/80 z-50 flex items-center justify-center p-4">
+    <div id="session-modal" role="dialog" aria-modal="true" aria-labelledby="session-modal-title" aria-describedby="session-modal-desc"
+      class="bg-white text-slate-950 max-w-lg w-full rounded-2xl border-2 border-amber-500 shadow-2xl p-6 space-y-5">
+      <div class="flex items-center gap-2">
+        <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-950 text-xs font-extrabold uppercase">
+          Aviso de vencimiento de sesión
+        </span>
+      </div>
+
+      <h2 id="session-modal-title" class="text-xl font-extrabold text-slate-950">
+        Tu sesión está próxima a cerrarse por inactividad
+      </h2>
+
+      <!-- Texto exacto requerido para el aviso de vencimiento de sesión -->
+      <p id="session-modal-desc" class="text-base text-slate-900 leading-relaxed bg-amber-50 border border-amber-300 rounded-xl p-4 font-medium">
+        Tu sesión permanecerá activa por inactividad durante 2 minutos más y se cerrará automáticamente a las 14:00 para proteger tus datos. Tu borrador guardado se conservará; selecciona <strong>"Mantener sesión activa"</strong> para extender el tiempo sin perder tu avance.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-end gap-3 pt-2 responsive-stack">
+        <button type="button" id="btn-close-session-modal"
+          class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-950 font-bold text-sm cursor-pointer">
+          Conservar borrador y cerrar aviso
+        </button>
+        <button type="button" id="btn-extend-session"
+          class="px-5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-extrabold text-sm cursor-pointer">
+          Mantener sesión activa
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-white border-t border-slate-200 py-4 px-4 mt-6 text-center text-xs text-slate-700">
+    Conecta Campus · Universidad Valle Central · Diseño Universal accesible bajo WCAG 2.2 Nivel AA
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const STORAGE_KEY = 'conecta_campus_universal_draft_v2';
+
+      const state = {
+        currentStep: 1,
+        lastFocusedBeforeModal: null,
+        videoPlaying: false,
+        videoCueIndex: 0,
+        videoTimer: null,
+        ccEnabled: true,
+        form: {
+          tipoBeca: '',
+          nombreCompleto: '',
+          codigoEstudiante: '',
+          correoInstitucional: ''
+        },
+        files: {
+          matricula: null,
+          ingresos: null,
+          declaracion: null
+        }
+      };
+
+      const videoCues = [
+        {
+          time: '00:05 / 00:15',
+          progress: 33,
+          scene: '[Escena 1: Bienvenida e información general de la convocatoria 2026-I]',
+          caption: '[CC] «Bienvenido a Conecta Campus. Para solicitar tu beca necesitas tres documentos en PDF o JPG de hasta 5 megabytes.»'
+        },
+        {
+          time: '00:10 / 00:15',
+          progress: 66,
+          scene: '[Escena 2: Detalle de constancia de matrícula, ingresos y declaración jurada]',
+          caption: '[CC] «Primero, tu constancia de matrícula vigente; segundo, tu constancia de ingresos del hogar; y tercero, la declaración jurada firmada.»'
+        },
+        {
+          time: '00:15 / 00:15',
+          progress: 100,
+          scene: '[Escena 3: Plazo hasta el 18 de diciembre y guardado automático]',
+          caption: '[CC] «Tienes plazo hasta el viernes 18 de diciembre. Tu avance se guarda automáticamente y puedes revisar todo antes de enviar.»'
+        }
+      ];
+
+      function announceToScreenReader(message) {
+        const liveEl = document.getElementById('global-live-status');
+        const transcriptEl = document.getElementById('sr-live-transcript');
+        if (liveEl) {
+          liveEl.textContent = '';
+          window.setTimeout(() => {
+            liveEl.textContent = message;
+          }, 40);
+        }
+        if (transcriptEl) {
+          transcriptEl.textContent = message;
+        }
+      }
+
+      // Rastreo continuo de foco para auditoría de teclado y lector de pantalla
+      document.addEventListener('focusin', (event) => {
+        const el = event.target;
+        if (!el || el === document.body) return;
+        const focusedLabelEl = document.getElementById('sr-focused-element');
+        const accNameEl = document.getElementById('sr-accessible-name');
+        if (!focusedLabelEl || !accNameEl) return;
+
+        const tag = el.tagName.toLowerCase();
+        const idPart = el.id ? `#${el.id}` : '';
+        focusedLabelEl.textContent = `<${tag}${idPart}>`;
+
+        let accessibleName = el.getAttribute('aria-label') || '';
+        if (!accessibleName && el.id) {
+          const associatedLabel = document.querySelector(`label[for="${el.id}"]`);
+          if (associatedLabel) accessibleName = associatedLabel.textContent.trim();
+        }
+        if (!accessibleName) {
+          accessibleName = el.textContent.trim().replace(/\s+/g, ' ').slice(0, 80) || 'Sin etiqueta';
+        }
+        accNameEl.textContent = `"${accessibleName}"`;
+      });
+
+      function syncFormToState() {
+        state.form.tipoBeca = document.getElementById('tipo-beca').value.trim();
+        state.form.nombreCompleto = document.getElementById('nombre-completo').value.trim();
+        state.form.codigoEstudiante = document.getElementById('codigo-estudiante').value.trim();
+        state.form.correoInstitucional = document.getElementById('correo-institucional').value.trim();
+      }
+
+      function saveDraft() {
+        try {
+          syncFormToState();
+          const now = new Date().toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            form: state.form,
+            files: state.files,
+            savedAt: now
+          }));
+          const indicator = document.getElementById('draft-indicator');
+          if (indicator) {
+            indicator.textContent = `Borrador guardado automáticamente (${now})`;
+          }
+        } catch (err) {
+          // Manejo seguro
+        }
+      }
+
+      function restoreDraft() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return;
+          const parsed = JSON.parse(raw);
+          if (parsed.form) {
+            state.form = Object.assign(state.form, parsed.form);
+            document.getElementById('tipo-beca').value = state.form.tipoBeca || '';
+            document.getElementById('nombre-completo').value = state.form.nombreCompleto || '';
+            document.getElementById('codigo-estudiante').value = state.form.codigoEstudiante || '';
+            document.getElementById('correo-institucional').value = state.form.correoInstitucional || '';
+          }
+          if (parsed.files) {
+            ['matricula', 'ingresos', 'declaracion'].forEach((key) => {
+              if (parsed.files[key]) {
+                state.files[key] = parsed.files[key];
+                updateDocumentCard(key);
+              }
+            });
+          }
+          if (parsed.savedAt) {
+            document.getElementById('draft-indicator').textContent = `Borrador recuperado (${parsed.savedAt})`;
+          }
+        } catch (err) {
+          // Manejo seguro
+        }
+      }
+
+      function goToStep(stepNumber, focusElementId = null) {
+        state.currentStep = stepNumber;
+
+        [1, 2, 3].forEach((step) => {
+          const section = document.getElementById(`screen-${step}`);
+          const tabBtn = document.getElementById(`step-tab-${step}`);
+          const isCurrent = step === stepNumber;
+
+          section.classList.toggle('hidden', !isCurrent);
+          if (isCurrent) {
+            tabBtn.setAttribute('aria-current', 'step');
+            tabBtn.className = 'step-nav-btn w-full text-left px-4 py-3 rounded-xl bg-white text-blue-950 font-extrabold text-sm flex items-center gap-3 shadow-sm cursor-pointer';
+            tabBtn.querySelector('span').className = 'w-7 h-7 rounded-full bg-blue-700 text-white text-xs flex items-center justify-center font-extrabold shrink-0';
+          } else {
+            tabBtn.removeAttribute('aria-current');
+            tabBtn.className = 'step-nav-btn w-full text-left px-4 py-3 rounded-xl bg-blue-900/80 text-blue-100 hover:bg-blue-900 font-bold text-sm flex items-center gap-3 border border-blue-800 cursor-pointer';
+            tabBtn.querySelector('span').className = 'w-7 h-7 rounded-full bg-blue-800 text-blue-100 text-xs flex items-center justify-center font-bold shrink-0';
+          }
+        });
+
+        if (stepNumber === 3) {
+          document.getElementById('review-subview').classList.remove('hidden');
+          document.getElementById('confirmation-subview').classList.add('hidden');
+          populateReview();
+        }
+
+        window.setTimeout(() => {
+          if (focusElementId) {
+            const target = document.getElementById(focusElementId);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              target.focus({ preventScroll: true });
+              return;
+            }
+          }
+          const heading = document.getElementById(`screen-${stepNumber}-heading`);
+          if (heading) heading.focus();
+        }, 50);
+
+        const announcements = {
+          1: 'Paso 1 de 3: Solicitud de Beca, Requisitos y Cronograma.',
+          2: 'Paso 2 de 3: Formulario de Postulación y Documentos Adjuntos.',
+          3: 'Paso 3 de 3: Revisión de tu Solicitud antes de Enviar.'
+        };
+        announceToScreenReader(announcements[stepNumber]);
+      }
+
+      function updateDocumentCard(docKey) {
+        const fileInfo = state.files[docKey];
+        const badge = document.getElementById(`badge-${docKey}`);
+        const statusText = document.getElementById(`status-file-${docKey}`);
+        const removeBtn = document.getElementById(`remove-${docKey}`);
+        const card = document.getElementById(`doc-card-${docKey}`);
+        const errorEl = document.getElementById(`error-file-${docKey}`);
+
+        if (fileInfo) {
+          badge.textContent = 'Adjuntado';
+          badge.className = 'px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 text-emerald-950';
+          statusText.innerHTML = `Archivo cargado: <strong class="text-emerald-900">${fileInfo.name}</strong> (${fileInfo.sizeLabel})`;
+          removeBtn.classList.remove('hidden');
+          card.classList.remove('border-red-600', 'border-slate-300');
+          card.classList.add('border-emerald-600');
+          errorEl.classList.add('hidden');
+          errorEl.textContent = '';
+        } else {
+          badge.textContent = 'Pendiente';
+          badge.className = 'px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950';
+          statusText.textContent = 'Ningún archivo seleccionado.';
+          removeBtn.classList.add('hidden');
+          card.classList.remove('border-emerald-600');
+          card.classList.add('border-slate-300');
+        }
+      }
+
+      function attachDocument(docKey, fileName, sizeBytes) {
+        const maxBytes = 5 * 1024 * 1024;
+        const lower = fileName.toLowerCase();
+        const validExt = lower.endsWith('.pdf') || lower.endsWith('.jpg') || lower.endsWith('.jpeg');
+        const errorEl = document.getElementById(`error-file-${docKey}`);
+
+        if (!validExt) {
+          errorEl.textContent = `El archivo "${fileName}" no es válido. Selecciona un archivo PDF o JPG (máximo 5 MB).`;
+          errorEl.classList.remove('hidden');
+          announceToScreenReader(errorEl.textContent);
+          return;
+        }
+        if (sizeBytes > maxBytes) {
+          errorEl.textContent = `El archivo "${fileName}" supera los 5 MB permitidos. Selecciona un archivo más liviano.`;
+          errorEl.classList.remove('hidden');
+          announceToScreenReader(errorEl.textContent);
+          return;
+        }
+
+        const sizeKB = Math.max(1, Math.round(sizeBytes / 1024));
+        const sizeLabel = sizeKB >= 1024 ? `${(sizeKB / 1024).toFixed(1)} MB` : `${sizeKB} KB`;
+        state.files[docKey] = { name: fileName, sizeLabel };
+        updateDocumentCard(docKey);
+        saveDraft();
+        announceToScreenReader(`Archivo "${fileName}" adjuntado correctamente.`);
+      }
+
+      function validateStep2() {
+        syncFormToState();
+        const errors = [];
+
+        // Limpiar errores previos y atributos aria-invalid
+        [
+          { inputId: 'tipo-beca', errId: 'error-tipo-beca' },
+          { inputId: 'nombre-completo', errId: 'error-nombre' },
+          { inputId: 'codigo-estudiante', errId: 'error-codigo' },
+          { inputId: 'correo-institucional', errId: 'error-correo' }
+        ].forEach(({ inputId, errId }) => {
+          const inp = document.getElementById(inputId);
+          const err = document.getElementById(errId);
+          inp.removeAttribute('aria-invalid');
+          err.classList.add('hidden');
+          err.textContent = '';
+        });
+
+        ['matricula', 'ingresos', 'declaracion'].forEach((docKey) => {
+          const err = document.getElementById(`error-file-${docKey}`);
+          err.classList.add('hidden');
+          err.textContent = '';
+        });
+
+        if (!state.form.tipoBeca) {
+          const msg = 'Selecciona el tipo de beca en la lista desplegable para continuar.';
+          const inp = document.getElementById('tipo-beca');
+          const err = document.getElementById('error-tipo-beca');
+          inp.setAttribute('aria-invalid', 'true');
+          err.textContent = msg;
+          err.classList.remove('hidden');
+          errors.push({ targetId: 'tipo-beca', text: msg });
+        }
+
+        if (!state.form.nombreCompleto) {
+          const msg = 'Ingresa tu nombre completo tal como figura en tu documento de identidad.';
+          const inp = document.getElementById('nombre-completo');
+          const err = document.getElementById('error-nombre');
+          inp.setAttribute('aria-invalid', 'true');
+          err.textContent = msg;
+          err.classList.remove('hidden');
+          errors.push({ targetId: 'nombre-completo', text: msg });
+        }
+
+        if (!/^\d{6,12}$/.test(state.form.codigoEstudiante)) {
+          const msg = 'Ingresa un código de estudiante válido de 6 a 12 dígitos numéricos.';
+          const inp = document.getElementById('codigo-estudiante');
+          const err = document.getElementById('error-codigo');
+          inp.setAttribute('aria-invalid', 'true');
+          err.textContent = msg;
+          err.classList.remove('hidden');
+          errors.push({ targetId: 'codigo-estudiante', text: msg });
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.form.correoInstitucional)) {
+          const msg = 'Ingresa un correo electrónico institucional válido (ejemplo: estudiante@vallecentral.edu.pe).';
+          const inp = document.getElementById('correo-institucional');
+          const err = document.getElementById('error-correo');
+          inp.setAttribute('aria-invalid', 'true');
+          err.textContent = msg;
+          err.classList.remove('hidden');
+          errors.push({ targetId: 'correo-institucional', text: msg });
+        }
+
+        const docs = [
+          { key: 'matricula', label: 'Constancia de matrícula vigente', triggerId: 'file-matricula' },
+          { key: 'ingresos', label: 'Constancia de ingresos del hogar', triggerId: 'file-ingresos' },
+          { key: 'declaracion', label: 'Declaración jurada firmada', triggerId: 'file-declaracion' }
+        ];
+
+        docs.forEach((doc) => {
+          if (!state.files[doc.key]) {
+            const exactMsg = `Falta adjuntar el documento obligatorio "${doc.label}". Selecciona un archivo PDF o JPG (máximo 5 MB) usando el botón "Seleccionar archivo" para poder continuar; los demás datos de tu solicitud se han conservado.`;
+            const err = document.getElementById(`error-file-${doc.key}`);
+            const card = document.getElementById(`doc-card-${doc.key}`);
+            err.textContent = exactMsg;
+            err.classList.remove('hidden');
+            card.classList.remove('border-slate-300');
+            card.classList.add('border-red-600');
+            errors.push({ targetId: doc.triggerId, text: exactMsg, isFile: true });
+          }
+        });
+
+        const summaryBox = document.getElementById('error-summary');
+        const summaryList = document.getElementById('error-summary-list');
+
+        if (errors.length > 0) {
+          summaryList.innerHTML = '';
+          errors.forEach((err) => {
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `#${err.targetId}`;
+            link.className = 'underline hover:text-red-800';
+            link.textContent = err.text;
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              if (err.isFile) {
+                const btn = document.querySelector(`[data-trigger-file="${err.targetId}"]`);
+                if (btn) btn.focus();
+              } else {
+                const target = document.getElementById(err.targetId);
+                if (target) target.focus();
+              }
+            });
+            li.appendChild(link);
+            summaryList.appendChild(li);
+          });
+
+          summaryBox.classList.remove('hidden');
+          summaryBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          summaryBox.focus();
+          announceToScreenReader(`Se encontraron ${errors.length} errores. Revisa el resumen en la parte superior.`);
+          return false;
+        }
+
+        summaryBox.classList.add('hidden');
+        saveDraft();
+        return true;
+      }
+
+      function populateReview() {
+        syncFormToState();
+        document.getElementById('review-beca').textContent = state.form.tipoBeca || '—';
+        document.getElementById('review-nombre').textContent = state.form.nombreCompleto || '—';
+        document.getElementById('review-codigo').textContent = state.form.codigoEstudiante || '—';
+        document.getElementById('review-correo').textContent = state.form.correoInstitucional || '—';
+
+        document.getElementById('review-doc-matricula').textContent = state.files.matricula
+          ? `${state.files.matricula.name} (${state.files.matricula.sizeLabel})`
+          : 'Pendiente';
+        document.getElementById('review-doc-ingresos').textContent = state.files.ingresos
+          ? `${state.files.ingresos.name} (${state.files.ingresos.sizeLabel})`
+          : 'Pendiente';
+        document.getElementById('review-doc-declaracion').textContent = state.files.declaracion
+          ? `${state.files.declaracion.name} (${state.files.declaracion.sizeLabel})`
+          : 'Pendiente';
+      }
+
+      function submitApplication() {
+        document.getElementById('review-subview').classList.add('hidden');
+        document.getElementById('confirmation-subview').classList.remove('hidden');
+
+        document.getElementById('confirm-beca').textContent = state.form.tipoBeca;
+        document.getElementById('confirm-correo').textContent = state.form.correoInstitucional;
+
+        const exactConfirmation = 'Solicitud registrada correctamente. Tu postulación a la beca ha sido recibida con el código de seguimiento #BEC-2026-0418 y se ha enviado un comprobante a tu correo institucional.';
+        announceToScreenReader(exactConfirmation);
+
+        window.setTimeout(() => {
+          const confirmHeading = document.getElementById('confirmation-heading');
+          if (confirmHeading) confirmHeading.focus();
+        }, 60);
+      }
+
+      function renderVideoCue(index) {
+        const cue = videoCues[index % videoCues.length];
+        document.getElementById('video-timecode').textContent = cue.time;
+        document.getElementById('video-visual-scene').textContent = cue.scene;
+        const captionBox = document.getElementById('video-caption-box');
+        captionBox.textContent = cue.caption;
+        captionBox.classList.toggle('hidden', !state.ccEnabled);
+
+        const bar = document.getElementById('video-progress-bar');
+        const fill = document.getElementById('video-progress-fill');
+        bar.setAttribute('aria-valuenow', String(Math.round((cue.progress / 100) * 15)));
+        fill.style.width = `${cue.progress}%`;
+      }
+
+      function openSessionModal() {
+        state.lastFocusedBeforeModal = document.activeElement;
+        const backdrop = document.getElementById('session-modal-backdrop');
+        backdrop.classList.remove('hidden');
+        announceToScreenReader('Aviso de vencimiento de sesión: Tu sesión permanecerá activa por inactividad durante 2 minutos más y se cerrará automáticamente a las 14:00 para proteger tus datos.');
+        window.setTimeout(() => {
+          document.getElementById('btn-extend-session').focus();
+        }, 40);
+      }
+
+      function closeSessionModal(extended = true) {
+        document.getElementById('session-modal-backdrop').classList.add('hidden');
+        saveDraft();
+        if (extended) {
+          announceToScreenReader('Sesión extendida. Tu borrador continúa protegido.');
+        } else {
+          announceToScreenReader('Borrador guardado y aviso de sesión cerrado.');
+        }
+        if (state.lastFocusedBeforeModal) {
+          state.lastFocusedBeforeModal.focus();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        restoreDraft();
+
+        // Controles de tamaño de texto (100% / 150% / 200%)
+        document.querySelectorAll('.scale-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const scale = btn.getAttribute('data-scale');
+            document.documentElement.classList.remove('scale-100', 'scale-150', 'scale-200');
+            document.documentElement.classList.add(`scale-${scale}`);
+
+            document.querySelectorAll('.scale-btn').forEach((b) => {
+              const active = b === btn;
+              b.setAttribute('aria-pressed', active ? 'true' : 'false');
+              b.className = active
+                ? 'scale-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white cursor-pointer'
+                : 'scale-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-200 hover:bg-slate-800 cursor-pointer';
+            });
+            announceToScreenReader(`Tamaño de texto ajustado al ${scale} por ciento.`);
+          });
+        });
+
+        // Contraste alto
+        document.getElementById('btn-toggle-contrast').addEventListener('click', (e) => {
+          const isHigh = document.documentElement.classList.toggle('high-contrast');
+          e.currentTarget.setAttribute('aria-pressed', isHigh ? 'true' : 'false');
+          announceToScreenReader(isHigh ? 'Modo de alto contraste activado.' : 'Modo de contraste estándar activado.');
+        });
+
+        // Navegación del stepper
+        document.querySelectorAll('.step-nav-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const step = Number(btn.getAttribute('data-step-nav'));
+            if (step === 3) {
+              if (validateStep2()) goToStep(3);
+              else goToStep(2);
+            } else {
+              goToStep(step);
+            }
+          });
+        });
+
+        // Controles de video (Pantalla 1)
+        document.getElementById('btn-video-play').addEventListener('click', (e) => {
+          state.videoPlaying = !state.videoPlaying;
+          const btn = e.currentTarget;
+          if (state.videoPlaying) {
+            btn.textContent = 'Pausar video';
+            renderVideoCue(state.videoCueIndex);
+            state.videoTimer = window.setInterval(() => {
+              state.videoCueIndex = (state.videoCueIndex + 1) % videoCues.length;
+              renderVideoCue(state.videoCueIndex);
+            }, 3000);
+          } else {
+            btn.textContent = 'Reproducir video con subtítulos';
+            window.clearInterval(state.videoTimer);
+          }
+        });
+
+        document.getElementById('btn-video-cc').addEventListener('click', (e) => {
+          state.ccEnabled = !state.ccEnabled;
+          const btn = e.currentTarget;
+          btn.setAttribute('aria-pressed', state.ccEnabled ? 'true' : 'false');
+          btn.textContent = state.ccEnabled ? 'Subtítulos (CC): Activados' : 'Subtítulos (CC): Desactivados';
+          document.getElementById('video-caption-box').classList.toggle('hidden', !state.ccEnabled);
+        });
+
+        document.getElementById('btn-video-next-cue').addEventListener('click', () => {
+          state.videoCueIndex = (state.videoCueIndex + 1) % videoCues.length;
+          renderVideoCue(state.videoCueIndex);
+        });
+
+        // Navegación entre pantallas
+        document.getElementById('btn-to-step-2').addEventListener('click', () => goToStep(2));
+        document.getElementById('btn-back-step-1').addEventListener('click', () => goToStep(1));
+        document.getElementById('btn-back-step-2').addEventListener('click', () => goToStep(2));
+
+        // Guardado automático en tiempo real
+        ['tipo-beca', 'nombre-completo', 'codigo-estudiante', 'correo-institucional'].forEach((id) => {
+          const el = document.getElementById(id);
+          el.addEventListener('input', saveDraft);
+          el.addEventListener('change', saveDraft);
+        });
+
+        // Selección de archivos sin arrastre obligatorio
+        document.querySelectorAll('[data-trigger-file]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            document.getElementById(btn.getAttribute('data-trigger-file')).click();
+          });
+        });
+
+        [
+          { key: 'matricula', inputId: 'file-matricula' },
+          { key: 'ingresos', inputId: 'file-ingresos' },
+          { key: 'declaracion', inputId: 'file-declaracion' }
+        ].forEach(({ key, inputId }) => {
+          const input = document.getElementById(inputId);
+          input.addEventListener('change', () => {
+            if (input.files && input.files[0]) {
+              attachDocument(key, input.files[0].name, input.files[0].size);
+            }
+          });
+        });
+
+        const sampleFiles = {
+          matricula: { name: 'constancia_matricula_2026.pdf', size: 420 * 1024 },
+          ingresos: { name: 'constancia_ingresos_hogar.pdf', size: 860 * 1024 },
+          declaracion: { name: 'declaracion_jurada_firmada.pdf', size: 310 * 1024 }
+        };
+
+        document.querySelectorAll('[data-simulate-file]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-simulate-file');
+            attachDocument(key, sampleFiles[key].name, sampleFiles[key].size);
+          });
+        });
+
+        document.querySelectorAll('[data-remove-file]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-remove-file');
+            state.files[key] = null;
+            document.getElementById(`file-${key}`).value = '';
+            updateDocumentCard(key);
+            saveDraft();
+            announceToScreenReader('Archivo retirado.');
+          });
+        });
+
+        // Soporte adicional opcional de drag & drop
+        document.querySelectorAll('[data-dropzone]').forEach((zone) => {
+          const key = zone.getAttribute('data-dropzone');
+          zone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            zone.classList.add('ring-2', 'ring-blue-600');
+          });
+          zone.addEventListener('dragleave', () => {
+            zone.classList.remove('ring-2', 'ring-blue-600');
+          });
+          zone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            zone.classList.remove('ring-2', 'ring-blue-600');
+            if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+              const file = e.dataTransfer.files[0];
+              attachDocument(key, file.name, file.size);
+            }
+          });
+        });
+
+        // Autocompletar datos de ejemplo
+        document.getElementById('btn-fill-demo-data').addEventListener('click', () => {
+          document.getElementById('tipo-beca').value = 'Beca Socioeconómica';
+          document.getElementById('nombre-completo').value = 'Andrea Camila Quispe Rojas';
+          document.getElementById('codigo-estudiante').value = '2023104892';
+          document.getElementById('correo-institucional').value = 'aquispe@vallecentral.edu.pe';
+          saveDraft();
+          announceToScreenReader('Datos de ejemplo completados. Adjunta los tres documentos obligatorios para continuar.');
+        });
+
+        // Envío del formulario hacia revisión
+        document.getElementById('scholarship-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (validateStep2()) goToStep(3);
+        });
+
+        // Botones "Editar" en Pantalla 3
+        document.querySelectorAll('[data-edit-target]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            goToStep(2, btn.getAttribute('data-edit-target'));
+          });
+        });
+
+        // Envío final
+        document.getElementById('btn-submit-application').addEventListener('click', submitApplication);
+
+        // Descargar comprobante resumen (.txt)
+        document.getElementById('btn-download-receipt').addEventListener('click', () => {
+          const content = [
+            'UNIVERSIDAD VALLE CENTRAL - CONECTA CAMPUS',
+            'COMPROBANTE DE SOLICITUD DE BECA',
+            '--------------------------------------------------',
+            'Código de seguimiento: #BEC-2026-0418',
+            `Postulante: ${state.form.nombreCompleto}`,
+            `Código de estudiante: ${state.form.codigoEstudiante}`,
+            `Correo institucional: ${state.form.correoInstitucional}`,
+            `Modalidad de beca: ${state.form.tipoBeca}`,
+            `Documentos adjuntos: ${state.files.matricula.name}, ${state.files.ingresos.name}, ${state.files.declaracion.name}`,
+            'Estado: Solicitud registrada correctamente'
+          ].join('\n');
+
+          const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'Comprobante_Beca_BEC-2026-0418.txt';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          announceToScreenReader('Comprobante resumen descargado.');
+        });
+
+        // Copiar código de seguimiento
+        document.getElementById('btn-copy-tracking').addEventListener('click', () => {
+          const tempInput = document.createElement('input');
+          tempInput.value = '#BEC-2026-0418';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          try {
+            document.execCommand('copy');
+            announceToScreenReader('Código #BEC-2026-0418 copiado al portapapeles.');
+          } catch (err) {
+            announceToScreenReader('Código de seguimiento: #BEC-2026-0418.');
+          }
+          document.body.removeChild(tempInput);
+        });
+
+        // Reiniciar solicitud
+        document.getElementById('btn-reset-demo').addEventListener('click', () => {
+          localStorage.removeItem(STORAGE_KEY);
+          document.getElementById('scholarship-form').reset();
+          state.files = { matricula: null, ingresos: null, declaracion: null };
+          ['matricula', 'ingresos', 'declaracion'].forEach(updateDocumentCard);
+          goToStep(1);
+        });
+
+        // Modal de sesión accesible con trampa de foco y tecla Escape
+        document.getElementById('btn-simulate-timeout').addEventListener('click', openSessionModal);
+        document.getElementById('btn-extend-session').addEventListener('click', () => closeSessionModal(true));
+        document.getElementById('btn-close-session-modal').addEventListener('click', () => closeSessionModal(false));
+
+        document.getElementById('session-modal').addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeSessionModal(true);
+          }
+          if (e.key === 'Tab') {
+            const buttons = e.currentTarget.querySelectorAll('button');
+            const first = buttons[0];
+            const last = buttons[buttons.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
